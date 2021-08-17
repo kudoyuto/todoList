@@ -2,3 +2,14 @@
     color: gray;
     text-decoration:line-through;
 }
+.delete {
+    margin-left: 5px;
+    background-color: hsl(9, 92%, 47%);
+    border: none;
+    color: white;
+    padding: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}

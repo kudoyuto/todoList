@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 
 import { selectTodoById, ToggleTodo, RemoveTodo} from "../reducers/todosSlice"
 import "../../styles/TodoItem.css"
+
 function TodoItem(props) {
     
     
@@ -18,10 +19,10 @@ function TodoItem(props) {
 
     const todoStatus = todo.done ? "done": "";
     return (
-        <div className="">
+        <div className="TodoList">
             
             <span className={`TodoItem-todo ${todoStatus}`} onClick={handleClick}>{todo.text}</span>
-            <button onClick={handleDelete}>X</button>
+            <button className="delete"onClick={handleDelete}>X</button>
         </div>
     )
 }
