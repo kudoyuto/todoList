@@ -1,0 +1,4 @@
+.TodoItem-todo.done {
+    color: gray;
+    text-decoration:line-through;
+}
