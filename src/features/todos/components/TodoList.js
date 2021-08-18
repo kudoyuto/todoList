@@ -13,10 +13,10 @@ function TodoList() {
     const dispatch = useDispatch();
     useEffect(() => {
        getTodos().then((response) => {
-           console.log("response.data:", response.data)
+           
            dispatch(AddTodos(response.data));
        })       
-    }, [])
+    }, [dispatch])
 
     return (
         <div className="TodoList">
