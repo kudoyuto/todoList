@@ -11,10 +11,7 @@ function TodoList() {
     useEffect(() => {
        getTodos().then((response) => {
            console.log("response.data:", response.data)
-       })
-        return () => {
-            
-        }
+       })       
     }, [])
 
     return (
