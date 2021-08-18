@@ -32,11 +32,16 @@ const todosSlice = createSlice({
             todosAdapter.removeOne(state, action.payload)
 
         },
+        AddTodos(state, action) {
+            todosAdapter.addMany(state, action.payload);
+            
+
+        },
         
 
     },
 });
-export const {AddTodo, ToggleTodo, RemoveTodo} =  todosSlice.actions;
+export const {AddTodo, ToggleTodo, RemoveTodo, AddTodos} =  todosSlice.actions;
 
 export default todosSlice.reducer;
 
