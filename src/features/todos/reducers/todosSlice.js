@@ -30,7 +30,8 @@ const todosSlice = createSlice({
             
         },
         RemoveTodo(state, action) {
-            todosAdapter.removeOne(state, action.payload)
+            
+            todosAdapter.removeOne(state,action.payload);
 
         },
         AddTodos(state, action) {

@@ -4,7 +4,8 @@ import { Button, Radio } from 'antd';
 
 import { selectTodoById, ToggleTodo, RemoveTodo} from "../reducers/todosSlice"
 import "../../styles/TodoItem.css"
-import { updateTodo } from "../../apis/todos"
+import { updateTodo, removeTodo } from "../../apis/todos"
+
 
 
 function TodoItem(props) {
@@ -22,7 +23,10 @@ function TodoItem(props) {
          
     }
     function handleDelete() {
-        dispatch(RemoveTodo(props.id));
+        removeTodo(props.id).then((response) =>{
+           dispatch(RemoveTodo(props.id));
+        });
+        
     }
 
     const todoStatus = todo.done ? "done": "";
