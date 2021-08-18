@@ -1,4 +1,4 @@
-import { createEntityAdapter, createSlice } from "@reduxjs/toolkit";
+import { createEntityAdapter, createSelector, createSlice } from "@reduxjs/toolkit";
 import {v4 as uuid } from "uuid"
 
 const todosAdapter = createEntityAdapter();
@@ -40,6 +40,11 @@ export const {AddTodo, ToggleTodo, RemoveTodo} =  todosSlice.actions;
 
 export default todosSlice.reducer;
 
-export const {selectIds: selectTodoIds, selectById: selectTodoById } = todosAdapter.getSelectors(
+export const {selectIds: selectTodoIds, selectById: selectTodoById, selectAll: selectTodos } = todosAdapter.getSelectors(
     (state) => state.todoList
 );
+
+export const selectDoneList = createSelector([selectTodos], (todos) => {
+    console.log("todos:", todos);
+    return todos.filter((todo) => todo.done);
+})
