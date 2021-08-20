@@ -5,3 +5,13 @@
     
     border-radius: 5px;
 }
+.TodoListBox {
+    background-color: rgb(218, 255, 170);
+    max-width: 85%;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+   
+    border-radius: 5px;
+}

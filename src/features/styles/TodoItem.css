@@ -3,13 +3,18 @@
     text-decoration:line-through;
 }
 .delete {
-    margin-left: 5px;
     background-color: hsl(9, 92%, 47%);
     border: none;
     color: white;
-    padding: 2px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: flex;
+    float: right;
     font-size: 12px;
+  
+}
+
+.todo-itembtn-done{
+    display: none;
+
 }
